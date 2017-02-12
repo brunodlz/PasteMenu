@@ -12,10 +12,7 @@ class PasteMenuViewController: NSViewController {
     }
     
     @IBAction func addLinkPressed(_ sender: NSButton) {
-        let text = linkTextField.stringValue
-        guard text.characters.count > 0 else { return }
-        
-        viewModel.set(link: text)
+        viewModel.set(link: linkTextField.stringValue)
         linkTextField.stringValue = ""
         tableView.reloadData()
     }
