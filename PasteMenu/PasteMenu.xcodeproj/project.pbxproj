@@ -12,6 +12,7 @@
 		7C6458FB1E4FE89C008511F7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6458F91E4FE89C008511F7 /* MainMenu.xib */; };
 		7C6459071E4FEFCD008511F7 /* PasteMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6459051E4FEFCD008511F7 /* PasteMenuViewController.swift */; };
 		7C6459081E4FEFCD008511F7 /* PasteMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6459061E4FEFCD008511F7 /* PasteMenuViewController.xib */; };
+		7CBC9E141E50E29F005E73D9 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBC9E131E50E29F005E73D9 /* EventMonitor.swift */; };
 		7CE90B731E50DD640057264E /* PasteMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE90B721E50DD640057264E /* PasteMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		7C6458FC1E4FE89C008511F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C6459051E4FEFCD008511F7 /* PasteMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteMenuViewController.swift; sourceTree = "<group>"; };
 		7C6459061E4FEFCD008511F7 /* PasteMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteMenuViewController.xib; sourceTree = "<group>"; };
+		7CBC9E131E50E29F005E73D9 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		7CE90B721E50DD640057264E /* PasteMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,9 +77,10 @@
 		7C6459031E4FEF1B008511F7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7C6458F51E4FE89B008511F7 /* AppDelegate.swift */,
-				7C6459051E4FEFCD008511F7 /* PasteMenuViewController.swift */,
-				7CE90B721E50DD640057264E /* PasteMenuViewModel.swift */,
+				7CBC9E181E50E2C0005E73D9 /* AppDelegate */,
+				7CBC9E161E50E2AC005E73D9 /* ViewController */,
+				7CBC9E151E50E2A7005E73D9 /* ViewModel */,
+				7CBC9E171E50E2B1005E73D9 /* Utils */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -89,6 +92,38 @@
 				7C6458F91E4FE89C008511F7 /* MainMenu.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		7CBC9E151E50E2A7005E73D9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7CE90B721E50DD640057264E /* PasteMenuViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		7CBC9E161E50E2AC005E73D9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7C6459051E4FEFCD008511F7 /* PasteMenuViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		7CBC9E171E50E2B1005E73D9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7CBC9E131E50E29F005E73D9 /* EventMonitor.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		7CBC9E181E50E2C0005E73D9 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7C6458F51E4FE89B008511F7 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +202,7 @@
 				7C6458F61E4FE89B008511F7 /* AppDelegate.swift in Sources */,
 				7C6459071E4FEFCD008511F7 /* PasteMenuViewController.swift in Sources */,
 				7CE90B731E50DD640057264E /* PasteMenuViewModel.swift in Sources */,
+				7CBC9E141E50E29F005E73D9 /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
