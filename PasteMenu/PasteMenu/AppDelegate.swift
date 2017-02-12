@@ -4,6 +4,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     fileprivate var statusItem: NSStatusItem!
+    fileprivate var popover: NSPopover!
     
     @IBOutlet weak var window: NSWindow!
 
@@ -13,10 +14,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.target = self
         statusItem.action = #selector(showPaste(_:))
         statusItem.highlightMode = true
+        
+        popover = NSPopover()
+        popover.contentViewController = PasteMenuViewController(nibName: "PasteMenuViewController",
+                                                                bundle: nil)
     }
 
     @objc fileprivate func showPaste(_ sender: NSStatusBarButton) {
-        print("it's working !!!")
+        
+        guard !popover.isShown else {
+            popover.close()
+            return
+        }
+        popover.show(relativeTo: sender.bounds, of: sender, preferredEdge: .minY)
     }
     
 }
