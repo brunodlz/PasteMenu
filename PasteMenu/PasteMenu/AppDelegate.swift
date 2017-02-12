@@ -15,8 +15,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.highlightMode = true
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) { }
-
     @objc fileprivate func showPaste(_ sender: NSStatusBarButton) {
         print("it's working !!!")
     }
