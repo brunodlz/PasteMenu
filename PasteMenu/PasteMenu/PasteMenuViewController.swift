@@ -26,7 +26,6 @@ class PasteMenuViewController: NSViewController {
     }
 }
 
-
 extension PasteMenuViewController: NSTableViewDataSource, NSTableViewDelegate {
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -36,13 +35,14 @@ extension PasteMenuViewController: NSTableViewDataSource, NSTableViewDelegate {
         cellView.textField?.stringValue = viewModel.get(link: row)
         return cellView
     }
-    
+
     func tableViewSelectionDidChange(_ notification: Notification) {
-        
         let link = viewModel.get(link: descriptionTableView.selectedRow)
         
         NSPasteboard.general().clearContents()
         NSPasteboard.general().setString(link, forType: NSPasteboardTypeString)
+        
+        self.descriptionTableView.deselectRow(self.descriptionTableView.selectedRow)
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
