@@ -2,8 +2,8 @@ import Cocoa
 
 class PasteMenuViewController: NSViewController {
 
-    @IBOutlet weak var linkTextField: NSTextField!
-    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var descriptionTextField: NSTextField!
+    @IBOutlet weak var descriptionTableView: NSTableView!
     
     var viewModel = PasteMenuViewModel()
     
@@ -11,12 +11,21 @@ class PasteMenuViewController: NSViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func addLinkPressed(_ sender: NSButton) {
-        viewModel.set(link: linkTextField.stringValue)
-        linkTextField.stringValue = ""
-        tableView.reloadData()
+    @IBAction func addDescriptionPressed(_ sender: NSButton) {
+        saveDescription()
+    }
+    
+    override func controlTextDidEndEditing(_ obj: Notification) {
+        saveDescription()
+    }
+    
+    private func saveDescription() {
+        viewModel.set(link: descriptionTextField.stringValue)
+        descriptionTextField.stringValue = ""
+        descriptionTableView.reloadData()
     }
 }
+
 
 extension PasteMenuViewController: NSTableViewDataSource, NSTableViewDelegate {
     
@@ -28,7 +37,7 @@ extension PasteMenuViewController: NSTableViewDataSource, NSTableViewDelegate {
     
     func tableViewSelectionDidChange(_ notification: Notification) {
         
-        let link = viewModel.get(link: tableView.selectedRow)
+        let link = viewModel.get(link: descriptionTableView.selectedRow)
         
         NSPasteboard.general().clearContents()
         NSPasteboard.general().setString(link, forType: NSPasteboardTypeString)
