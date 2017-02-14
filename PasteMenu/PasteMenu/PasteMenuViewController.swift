@@ -30,7 +30,9 @@ class PasteMenuViewController: NSViewController {
 extension PasteMenuViewController: NSTableViewDataSource, NSTableViewDelegate {
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cellView = tableView.make(withIdentifier: "cell", owner: self) as! NSTableCellView
+        guard let cellView = tableView.make(withIdentifier: "cell", owner: self) as? NSTableCellView else {
+            return nil
+        }
         cellView.textField?.stringValue = viewModel.get(link: row)
         return cellView
     }
