@@ -54,13 +54,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView identifier="cell" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="21" rowSizeStyle="automatic" viewBased="YES" id="w7x-KX-pLd">
-                                <rect key="frame" x="0.0" y="0.0" width="478" height="260"/>
+                                <rect key="frame" x="0.0" y="0.0" width="545" height="260"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
-                                    <tableColumn identifier="cell" width="475" minWidth="40" maxWidth="1000" id="hrI-2g-jI4">
+                                    <tableColumn identifier="content" width="475" minWidth="40" maxWidth="1000" id="hrI-2g-jI4">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
