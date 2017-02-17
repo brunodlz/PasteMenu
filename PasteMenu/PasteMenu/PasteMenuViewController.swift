@@ -35,7 +35,15 @@ extension PasteMenuViewController: NSTableViewDataSource, NSTableViewDelegate {
         guard let cellView = tableView.make(withIdentifier: column.identifier,
                                             owner: self) as? NSTableCellView else { return nil }
 
-        cellView.textField?.stringValue = viewModel.get(link: row)
+        if column.identifier == "content" {
+            cellView.textField?.stringValue = viewModel.get(link: row)
+            return cellView
+        }
+        if column.identifier == "type" {
+            cellView.textField?.stringValue = " TEXT "
+            return cellView
+        }
+        
         return cellView
     }
 
