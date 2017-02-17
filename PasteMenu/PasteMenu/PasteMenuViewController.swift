@@ -40,7 +40,7 @@ extension PasteMenuViewController: NSTableViewDataSource, NSTableViewDelegate {
             return cellView
         }
         if column.identifier == "type" {
-            cellView.textField?.stringValue = " TEXT "
+            cellView.textField?.stringValue = " \(viewModel.get(type: row)) "
             return cellView
         }
         

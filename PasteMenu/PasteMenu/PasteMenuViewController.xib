@@ -80,13 +80,10 @@
                                                     <textField identifier="cell" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-RD-YRF">
                                                         <rect key="frame" x="2" y="0.0" width="403" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="IRd-XE-5VR">
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" drawsBackground="YES" id="IRd-XE-5VR">
                                                             <font key="font" size="14" name="SFMono-Regular"/>
                                                             <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            <allowedInputSourceLocales>
-                                                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
-                                                            </allowedInputSourceLocales>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                 </subviews>
