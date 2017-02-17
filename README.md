@@ -4,7 +4,7 @@ Save your favorite link temporally :)
 
 [⬇️ LATEST RELEASE ⬇️](https://github.com/brunodlz/PasteMenu/releases)
 
-![screenshot](./screenshot.png)
+![screenshot](./screenshot2.png)
 
 ## Support
 
