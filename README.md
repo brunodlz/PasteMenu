@@ -1,6 +1,6 @@
 # PasteMenu
 
-Save your favorite link temporally :)
+Save your link or any text temporally :)
 
 [⬇️ LATEST RELEASE ⬇️](https://github.com/brunodlz/PasteMenu/releases/tag/v0.2)
 
