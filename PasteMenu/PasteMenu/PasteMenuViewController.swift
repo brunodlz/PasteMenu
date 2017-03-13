@@ -55,6 +55,23 @@ extension PasteMenuViewController: NSTableViewDataSource, NSTableViewDelegate {
         pasteboard.setString(link, forType: NSPasteboardTypeString)
     }
     
+    func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        
+        guard let cell = tableView.view(atColumn: 0,
+                                        row: row, makeIfNecessary: true)
+            as? NSTableCellView else { return false }
+        
+        let originalText = cell.textField?.stringValue
+        
+        cell.textField?.stringValue = "Copied!"
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            cell.textField?.stringValue = originalText!
+        }
+        
+        return true
+    }
+    
     func numberOfRows(in tableView: NSTableView) -> Int {
         return viewModel.numberOfRows()
     }
