@@ -2,7 +2,7 @@
 
 Save your link or any text temporally :)
 
-[⬇️ LATEST RELEASE ⬇️](https://github.com/brunodlz/PasteMenu/releases/tag/v0.2)
+[⬇️ LATEST RELEASE ⬇️](https://github.com/brunodlz/PasteMenu/releases/tag/v0.3)
 
 ![screenshot](./screenshot2.png)
 
