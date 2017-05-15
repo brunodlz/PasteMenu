@@ -67,6 +67,8 @@ extension PasteMenuViewController: NSTableViewDataSource, NSTableViewDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             cell.textField?.stringValue = originalText!
+            
+            tableView.deselectRow(row)
         }
         
         return true
