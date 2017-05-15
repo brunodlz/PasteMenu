@@ -1,11 +1,21 @@
 import Foundation
 
-enum Type: String, RawRepresentable {
-    case link  = "LINK"
-    case email = "EMAIL"
-    case audio = "MUSIC"
-    case video = "VIDEO"
-    case text  = "TEXT"
+enum Type: String, CustomStringConvertible {
+    case link
+    case email
+    case audio
+    case video
+    case text
+    
+    var description: String {
+        switch self {
+        case .link: return "LINK"
+        case .email: return "EMAIL"
+        case .audio: return "MUSIC"
+        case .video: return "VIDEO"
+        case .text: return "TEXT"
+        }
+    }
 }
 
 struct PasteMenuViewModel {
@@ -35,20 +45,19 @@ struct PasteMenuViewModel {
     }
     
     private func validate(text: String) -> String {
-        
         if text.containsAudio() {
-            return Type.audio.rawValue
+            return Type.audio.description
         }
         else if text.containsVideo() {
-            return Type.video.rawValue
+            return Type.video.description
         }
         else if text.containsLink() {
-            return Type.link.rawValue
+            return Type.link.description
         }
         else if text.containsEmail() {
-            return Type.email.rawValue
+            return Type.email.description
         }
-        return Type.text.rawValue
+        return Type.text.description
     }
     
 }
